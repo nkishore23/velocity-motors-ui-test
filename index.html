@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -22,12 +22,12 @@
 <body class="bg-white text-gray-800">
 
     <div class="wrapper">
-        <header id="header"
+        <header id="header" role="banner"
             class="fixed w-full bg-[var(--color-dark-background)] text-white z-10 transition-transform duration-300">
             <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
                 <h1 class="text-xl font-bold flex items-center gap-2 [&>i]:text-[var(--color-primary-orange)]"><i
                         class="fa-solid fa-car"></i> VELOCITY</h1>
-                <nav
+                <nav role="navigation" aria-label="Main Navigation"
                     class="navigation hidden md:block fixed md:static top-full left-0 h-full w-full md:w-auto bg-[var(--color-dark-background)] md:bg-transparent">
                     <ul
                         class="flex flex-col md:flex-row text-center items-center gap-4 lg:gap-8 text-xs md:text-sm lg:text-base font-medium">
@@ -37,13 +37,14 @@
 
 
                         </li>
-                        <li class="group dropdown"><a href="#"
+                        <li class="group dropdown"><a aria-haspopup="true"
+       aria-expanded="false" href="#"
                                 class="py-2 relative after:absolute after:left-0 after:bottom-1 after:w-0 after:h-[2px] after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full">Models</a>
-                            <i class="max-w-md:block hidden fa-solid fa-chevron-down"></i>
+                            <i aria-hidden="true" class="max-w-md:block hidden fa-solid fa-chevron-down"></i>
                             <div
                                 class="dropdown-menu absolute top-full left-0 w-full max-w-screen-xl bg-[var(--color-dark-background)]/80 shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50 min-w-full">
                                 <div class="max-w-6xl mx-auto px-6 py-10">
-                                    <div class="grid grid-cols-3 gap-6">
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                                         <div class="bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition">
                                             <img src="images/gallery-1.jpg" alt="Model 1"
                                                 class="w-full h-40 object-cover">
@@ -93,7 +94,9 @@
                     </ul>
 
                 </nav>
-                <button id="menu-btn" class="md:hidden flex flex-col gap-1 focus:outline-none">
+                <button aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="primary-navigation" id="menu-btn" class="md:hidden flex flex-col gap-1 focus:outline-none">
                     <span class="w-6 h-0.5 bg-white"></span>
                     <span class="w-6 h-0.5 bg-white"></span>
                     <span class="w-6 h-0.5 bg-white"></span>
@@ -102,7 +105,7 @@
             </div>
         </header>
 
-        <main>
+        <main role="main">
 
             <section class="relative bg-cover bg-center h-screen hero-slider overflow-hidden [&>div]:h-full">
                 <div class="bg-[url('images/slider-1.jpg')] bg-cover bg-center relative h-full">
@@ -403,7 +406,7 @@
                         <div class="space-y-5">
                             <div class="flex gap-8 shadow p-4 rounded-lg">
                                 <div class="icon [&>i]:text-[var(--color-primary-orange)] text-2xl">
-                                    <i class="fa-solid fa-location-dot"></i>
+                                    <i aria-hidden="true" class="fa-solid fa-location-dot"></i>
                                 </div>
                                 <div class="text-left">
                                     <h3 class="text-[var(--color-accent-blue)] mb-2 font-semibold">Visit Our Showroom
@@ -418,7 +421,7 @@
                             </div>
                             <div class="flex gap-8 shadow p-4 rounded-lg">
                                 <div class="icon [&>i]:text-[var(--color-primary-orange)] text-2xl">
-                                    <i class="fa-solid fa-phone"></i>
+                                    <i aria-hidden="true" class="fa-solid fa-phone"></i>
                                 </div>
                                 <div class="text-left">
                                     <h3 class="text-[var(--color-accent-blue)] mb-2 font-semibold">Call Us</h3>
@@ -434,7 +437,7 @@
                             </div>
                             <div class="flex gap-8 shadow p-4 rounded-lg">
                                 <div class="icon [&>i]:text-[var(--color-primary-orange)] text-2xl">
-                                    <i class="fa-solid fa-envelope"></i>
+                                    <i aria-hidden="true" class="fa-solid fa-envelope"></i>
                                 </div>
                                 <div class="text-left">
                                     <h3 class="text-[var(--color-accent-blue)] mb-2 font-semibold">Email Us</h3>
@@ -450,7 +453,7 @@
                             </div>
                             <div class="flex gap-8 shadow p-4 rounded-lg">
                                 <div class="icon [&>i]:text-[var(--color-primary-orange)] text-2xl">
-                                    <i class="fa-solid fa-clock"></i>
+                                    <i aria-hidden="true" class="fa-solid fa-clock"></i>
                                 </div>
                                 <div class="text-left">
                                     <h3 class="text-[var(--color-accent-blue)] mb-2 font-semibold">Business Hours</h3>
@@ -473,7 +476,7 @@
                                     for="name">Full
                                     Name
                                     <span class="">*</span></label>
-                                <input type="text" id="name" name="name" placeholder="Full Name"
+                                <input aria-required="true" type="text" id="name" name="name" placeholder="Full Name"
                                     class="w-full p-3 border rounded border-gray-300 form-field">
                             </div>
                             <div class="group">
@@ -481,21 +484,21 @@
                                     for="email">Email
                                     Address <span class="">*</span></label>
 
-                                <input type="email" id="email" name="email" placeholder="Email Address"
+                                <input aria-required="true" type="email" id="email" name="email" placeholder="Email Address"
                                     class="w-full p-3 border rounded border-gray-300 form-field">
                             </div>
                             <div class="group">
                                 <label class="block text-sm font-semibold text-[var(--color-accent-blue)] mb-1"
                                     for="phone">Phone
                                     Number <span class="">*</span></label>
-                                <input type="tel" id="phone" placeholder="Phone Number"
+                                <input aria-required="true" type="tel" id="phone" placeholder="Phone Number"
                                     class="w-full p-3 border rounded border-gray-300 form-field">
                             </div>
                             <div class="group">
                                 <label class="block text-sm font-semibold text-[var(--color-accent-blue)] mb-1"
                                     for="model">Preferred
                                     Preferred Model <span class="">*</span></label>
-                                <select id="model" name="model"
+                                <select aria-required="true" id="model" name="model"
                                     class="w-full p-3 border rounded border-gray-300 form-field">
                                     <option>Select Model</option>
                                     <option>Velocity Sport</option>
@@ -507,7 +510,7 @@
                                 <label class="block text-sm font-semibold text-[var(--color-accent-blue)] mb-1"
                                     for="date">Phone
                                     Preferred Date <span class="">*</span></label>
-                                <input type="date" id="date" name="date" placeholder="Preferred Date"
+                                <input aria-required="true" type="date" id="date" name="date" placeholder="Preferred Date"
                                     class="w-full p-3 border rounded border-gray-300 form-field">
                             </div>
                             <div class="group">
@@ -519,7 +522,7 @@
                             </div>
 
                             <div class="group">
-                                <input type="checkbox" id="terms" class="mr-2 form-field">
+                                <input aria-required="true" type="checkbox" id="terms" class="mr-2 form-field">
                                 <label for="terms" class="text-sm" for="terms">I agree to the terms and
                                     conditions</label>
                             </div>
@@ -538,7 +541,7 @@
 
 
 
-        <footer class="bg-[var(--color-dark-background)] text-white pt-10">
+        <footer role="contentinfo" class="bg-[var(--color-dark-background)] text-white pt-10">
             <div class="max-w-6xl mx-auto px-4 text-sm">
                 <div class="grid grid-cols-2 lg:grid-cols-5 gap-8">
                     <div>
@@ -548,22 +551,22 @@
                         <nav class="flex space-x-2 mt-4">
                             <a href="#"
                                 class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-600 transition">
-                                <i class="fab fa-facebook-f text-white"></i>
+                                <i aria-hidden="true" class="fab fa-facebook-f text-white"></i>
                                 <span class="sr-only">Facebook</span>
                             </a>
                             <a href="#"
                                 class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-600 transition">
-                                <i class="fab fa-twitter text-white"></i>
+                                <i aria-hidden="true" class="fab fa-twitter text-white"></i>
                                 <span class="sr-only">Twitter</span>
                             </a>
                             <a href="#"
                                 class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-600 transition">
-                                <i class="fab fa-instagram text-white"></i>
+                                <i aria-hidden="true" class="fab fa-instagram text-white"></i>
                                 <span class="sr-only">Instagram</span>
                             </a>
                             <a href="#"
                                 class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-600 transition">
-                                <i class="fab fa-youtube text-white"></i>
+                                <i aria-hidden="true" class="fab fa-youtube text-white"></i>
                                 <span class="sr-only">YouTube</span>
                             </a>
                         </nav>
