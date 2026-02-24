@@ -38,3 +38,21 @@ h1, h2, h3, h4, h5, h6 {
 .hero-slider .slick-slide > div {
   height: 100vh !important;
 }
+
+
+.mobile-menu-open {
+    overflow-y: hidden;
+}
+.mobile-menu-open .navigation { 
+    display: block !important;
+    top: 60px;
+}
+
+.navigation ul > li > a:before {
+    content: '';
+    height: 30px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: -15px;
+}

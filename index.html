@@ -25,19 +25,23 @@
             <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
                 <h1 class="text-xl font-bold flex items-center gap-2 [&>i]:text-[var(--color-primary-orange)]"><i
                         class="fa-solid fa-car"></i> VELOCITY</h1>
-                <nav class="navigation">
-                    <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <nav
+                    class="navigation hidden md:block fixed md:static top-full left-0 h-full w-full md:w-auto bg-[var(--color-dark-background)] md:bg-transparent">
+                    <ul
+                        class="flex flex-col md:flex-row text-center items-center gap-4 lg:gap-8 text-xs md:text-sm lg:text-base font-medium">
                         <li class="">
                             <a href="#"
                                 class="active py-2 relative after:absolute after:left-0 after:bottom-1 after:w-0 after:h-[2px] after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full [&.active]:after:w-full">Home</a>
 
 
                         </li>
-                        <li class="group"><a href="#"
+                        <li class="group dropdown"><a href="#"
                                 class="py-2 relative after:absolute after:left-0 after:bottom-1 after:w-0 after:h-[2px] after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full">Models</a>
+                            <i class="max-w-md:block hidden fa-solid fa-chevron-down"></i>
                             <div
-                                class="absolute top-full left-0 w-full max-w-screen-xl bg-white shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50 min-w-full">
-                                <div class="mx-auto px-6 py-10 grid grid-cols-5 gap-6">
+                                class="dropdown-menu absolute top-full left-0 w-full max-w-screen-xl bg-[var(--color-dark-background)]/80 shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50 min-w-full">
+                                <div class="max-w-6xl mx-auto px-6 py-10">
+                                    <div class="grid grid-cols-3 gap-6">
                                     <div class="bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition">
                                         <img src="#" alt="Model 1" class="w-full h-40 object-cover">
                                         <div class="p-4">
@@ -45,6 +49,23 @@
                                             <span
                                                 class="text-xs bg-orange-500 text-white px-2 py-1 rounded">Sport</span>
                                         </div>
+                                    </div>
+                                    <div class="bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition">
+                                        <img src="#" alt="Model 1" class="w-full h-40 object-cover">
+                                        <div class="p-4">
+                                            <h4 class="font-semibold text-gray-800">Velocity Sport</h4>
+                                            <span
+                                                class="text-xs bg-orange-500 text-white px-2 py-1 rounded">Sport</span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition">
+                                        <img src="#" alt="Model 1" class="w-full h-40 object-cover">
+                                        <div class="p-4">
+                                            <h4 class="font-semibold text-gray-800">Velocity Sport</h4>
+                                            <span
+                                                class="text-xs bg-orange-500 text-white px-2 py-1 rounded">Sport</span>
+                                        </div>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -443,28 +464,31 @@
                         <form class="p-8 rounded-lg shadow space-y-4" id="forTestDrive">
                             <p class="hidden text-[var(--color-error-red)]">Please fill in all required fields.</p>
                             <div class="group">
-                                <label class="block text-sm font-semibold text-[var(--color-accent-blue)] mb-1" for="name">Full
+                                <label class="block text-sm font-semibold text-[var(--color-accent-blue)] mb-1"
+                                    for="name">Full
                                     Name
                                     <span class="">*</span></label>
                                 <input type="text" id="name" name="name" placeholder="Full Name"
                                     class="w-full p-3 border rounded border-gray-300 form-field">
                             </div>
                             <div class="group">
-                                <label class="block text-sm font-semibold text-[var(--color-accent-blue)] mb-1" for="email">Email
+                                <label class="block text-sm font-semibold text-[var(--color-accent-blue)] mb-1"
+                                    for="email">Email
                                     Address <span class="">*</span></label>
 
                                 <input type="email" id="email" name="email" placeholder="Email Address"
                                     class="w-full p-3 border rounded border-gray-300 form-field">
                             </div>
                             <div class="group">
-                                <label class="block text-sm font-semibold text-[var(--color-accent-blue)] mb-1" for="phone">Phone
+                                <label class="block text-sm font-semibold text-[var(--color-accent-blue)] mb-1"
+                                    for="phone">Phone
                                     Number <span class="">*</span></label>
                                 <input type="tel" id="phone" placeholder="Phone Number"
                                     class="w-full p-3 border rounded border-gray-300 form-field">
                             </div>
                             <div class="group">
-                                <label
-                                    class="block text-sm font-semibold text-[var(--color-accent-blue)] mb-1" for="model">Preferred
+                                <label class="block text-sm font-semibold text-[var(--color-accent-blue)] mb-1"
+                                    for="model">Preferred
                                     Preferred Model <span class="">*</span></label>
                                 <select id="model" name="model"
                                     class="w-full p-3 border rounded border-gray-300 form-field">
@@ -475,7 +499,8 @@
                                 </select>
                             </div>
                             <div class="group">
-                                <label class="block text-sm font-semibold text-[var(--color-accent-blue)] mb-1" for="date">Phone
+                                <label class="block text-sm font-semibold text-[var(--color-accent-blue)] mb-1"
+                                    for="date">Phone
                                     Preferred Date <span class="">*</span></label>
                                 <input type="date" id="date" name="date" placeholder="Preferred Date"
                                     class="w-full p-3 border rounded border-gray-300 form-field">
@@ -490,7 +515,8 @@
 
                             <div class="group">
                                 <input type="checkbox" id="terms" class="mr-2 form-field">
-                                <label for="terms" class="text-sm" for="terms">I agree to the terms and conditions</label>
+                                <label for="terms" class="text-sm" for="terms">I agree to the terms and
+                                    conditions</label>
                             </div>
 
                             <button
@@ -597,6 +623,10 @@
         $(document).ready(function () {
             console.log("Running");
 
+            $('#menu-btn').on('click', function () {
+                $('body').toggleClass('mobile-menu-open');
+            });
+
             $('#year').text(new Date().getFullYear());
 
             $('.hero-slider').slick({
@@ -634,11 +664,20 @@
                 ]
             });
 
-            $('#forTestDrive').on('submit', function (e) {
+            const $form = $('#forTestDrive');
+
+            // Remove errors on input/blur
+            $form.find('.form-field').on('input blur', function () {
+                $(this).removeClass('border-red-600');
+                $(this).next('.error-message').remove();
+            });
+
+            $form.on('submit', function (e) {
                 e.preventDefault();
 
-                $('.error-message').remove();
-                $('.form-field').removeClass('border-red-600');
+                // Remove previous errors
+                $form.find('.error-message').remove();
+                $form.find('.form-field').removeClass('border-red-600');
 
                 let valid = true;
 
@@ -649,7 +688,6 @@
                 let date = $('#date').val();
                 let terms = $('#terms').is(':checked');
 
-                // Name
                 if (name.length < 2) {
                     $('#name')
                         .addClass('border-red-600')
@@ -657,15 +695,13 @@
                     valid = false;
                 }
 
-                // Email
-                if (!email.includes('@') || !email.includes('.')) {
+                if (!/^\S+@\S+\.\S+$/.test(email)) {
                     $('#email')
                         .addClass('border-red-600')
                         .after('<p class="error-message text-red-600 text-sm mt-1">Enter a valid email.</p>');
                     valid = false;
                 }
 
-                // Phone (min 10 digits)
                 if (!/^\d{10,}$/.test(phone)) {
                     $('#phone')
                         .addClass('border-red-600')
@@ -673,34 +709,33 @@
                     valid = false;
                 }
 
-                // Model
-                if (model === "" || model === "Select Model") {
+                if (!model || model === 'Select Model') {
                     $('#model')
                         .addClass('border-red-600')
                         .after('<p class="error-message text-red-600 text-sm mt-1">Select a model.</p>');
                     valid = false;
                 }
 
-                // Date
                 if (!date) {
                     $('#date')
                         .addClass('border-red-600')
                         .after('<p class="error-message text-red-600 text-sm mt-1">Select a date.</p>');
                     valid = false;
                 }
-                
+
                 if (!terms) {
                     $('#terms')
                         .parent()
-                        .after('<p class="error-message text-red-600 text-sm mt-1">You must accept terms.</p>');
+                        .after('<p class="error-message text-red-600 text-sm mt-1">You must accept the terms.</p>');
                     valid = false;
                 }
 
                 if (valid) {
-                    alert('Form submitted successfully!');
+                    $(this).append('<p class="text-green-600 text-sm mt-4">Form has been submitted successfully!</p>');
                     this.reset();
                 }
             });
+
 
             let lastScroll = 0;
             const header = document.getElementById('header');
@@ -715,6 +750,25 @@
                 }
 
                 lastScroll = currentScroll;
+            });
+
+
+            $('.dropdown >  i').on('click', function (e) {
+
+                if ($(window).width() < 768) {
+                    e.preventDefault();
+
+                    $(this).toggleClass('rotate-180');
+
+                    let $parent = $(this).closest('.dropdown');
+                    let $menu = $parent.find('.dropdown-menu');
+
+                    $('.dropdown-menu').not($menu)
+                        .removeClass('opacity-100 visible static');
+
+                    $menu.toggleClass('opacity-100 visible static');
+                }
+
             });
         })
     </script>
