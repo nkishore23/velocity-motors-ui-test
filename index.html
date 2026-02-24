@@ -5,46 +5,719 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Velocity Motors</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/theme.css" />
 </head>
 
 <body class="bg-white text-gray-800">
 
-
-    <header class="bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-bold flex items-center gap-2">🚗 VELOCITY</h1>
-            <nav class="hidden md:flex gap-8 text-sm">
-                <a href="#" class="hover:text-orange-500">Home</a>
-                <a href="#" class="hover:text-orange-500">Models</a>
-                <a href="#" class="hover:text-orange-500">Technology</a>
-                <a href="#" class="hover:text-orange-500">Gallery</a>
-                <a href="#" class="hover:text-orange-500">Contact</a>
-                <a href="#" class="bg-orange-500 px-4 py-2 rounded text-sm hover:bg-orange-600">Test Drive</a>
-            </nav>
-            <button id="menu-btn" class="md:hidden flex flex-col gap-1 focus:outline-none">
-                <span class="w-6 h-0.5 bg-white"></span>
-                <span class="w-6 h-0.5 bg-white"></span>
-                <span class="w-6 h-0.5 bg-white"></span>
-            </button>
-
-        </div>
-    </header>
+    <div class="wrapper">
+        <header id="header"
+            class="fixed w-full bg-[var(--color-dark-background)] text-white z-10 transition-transform duration-300">
+            <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+                <h1 class="text-xl font-bold flex items-center gap-2 [&>i]:text-[var(--color-primary-orange)]"><i
+                        class="fa-solid fa-car"></i> VELOCITY</h1>
+                <nav class="navigation">
+                    <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
+                        <li class="">
+                            <a href="#"
+                                class="active py-2 relative after:absolute after:left-0 after:bottom-1 after:w-0 after:h-[2px] after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full [&.active]:after:w-full">Home</a>
 
 
+                        </li>
+                        <li class="group"><a href="#"
+                                class="py-2 relative after:absolute after:left-0 after:bottom-1 after:w-0 after:h-[2px] after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full">Models</a>
+                            <div
+                                class="absolute top-full left-0 w-full max-w-screen-xl bg-white shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300 z-50 min-w-full">
+                                <div class="mx-auto px-6 py-10 grid grid-cols-5 gap-6">
+                                    <div class="bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition">
+                                        <img src="#" alt="Model 1" class="w-full h-40 object-cover">
+                                        <div class="p-4">
+                                            <h4 class="font-semibold text-gray-800">Velocity Sport</h4>
+                                            <span
+                                                class="text-xs bg-orange-500 text-white px-2 py-1 rounded">Sport</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="#"
+                                class="py-2 relative after:absolute after:left-0 after:bottom-1 after:w-0 after:h-[2px] after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full">Technology</a>
+                        </li>
+                        <li><a href="#"
+                                class="py-2 relative after:absolute after:left-0 after:bottom-1 after:w-0 after:h-[2px] after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full">Gallery</a>
+                        </li>
+                        <li><a href="#"
+                                class="py-2 relative after:absolute after:left-0 after:bottom-1 after:w-0 after:h-[2px] after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full">Technology</a>
+                        </li>
+                        <li><a href="#"
+                                class="py-2 relative after:absolute after:left-0 after:bottom-1 after:w-0 after:h-[2px] after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full">Contact</a>
+                        </li>
+                        <li><a href="#"
+                                class="bg-[var(--color-primary-orange)] px-4 py-2 rounded text-sm hover:bg-orange-600">Test
+                                Drive</a></li>
+                    </ul>
+
+                </nav>
+                <button id="menu-btn" class="md:hidden flex flex-col gap-1 focus:outline-none">
+                    <span class="w-6 h-0.5 bg-white"></span>
+                    <span class="w-6 h-0.5 bg-white"></span>
+                    <span class="w-6 h-0.5 bg-white"></span>
+                </button>
+
+            </div>
+        </header>
+
+        <main>
+
+            <section class="relative bg-cover bg-center h-screen hero-slider overflow-hidden [&>div]:h-full">
+                <div class="bg-[url('images/slider-1.jpg')] bg-cover bg-center relative h-full">
+                    <div class="absolute inset-0 bg-slate-900/70"></div>
+                    <div class="relative max-w-4xl mx-auto text-center text-white pt-40 px-6">
+                        <h2 class="text-5xl font-extrabold mb-4">ELECTRIC REVOLUTION</h2>
+                        <p class="mb-6 text-lg text-gray-200">Zero emissions. Infinite possibilities.</p>
+                        <div class="flex justify-center gap-4">
+                            <button class="bg-orange-500 px-6 py-3 rounded hover:bg-orange-600">Learn More</button>
+                            <button
+                                class="border border-white px-6 py-3 rounded hover:bg-white hover:text-black">Reserve
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[url('images/slider-2.jpg')] bg-cover relative bg-center h-full">
+                    <div class="absolute inset-0 bg-slate-900/70"></div>
+                    <div class="relative max-w-4xl mx-auto text-center text-white pt-40 px-6">
+                        <h2 class="text-5xl font-extrabold mb-4">ELECTRIC REVOLUTION</h2>
+                        <p class="mb-6 text-lg text-gray-200">Zero emissions. Infinite possibilities.</p>
+                        <div class="flex justify-center gap-4">
+                            <button class="bg-orange-500 px-6 py-3 rounded hover:bg-orange-600">Learn More</button>
+                            <button
+                                class="border border-white px-6 py-3 rounded hover:bg-white hover:text-black">Reserve
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-16 bg-gray-100">
+                <div class="max-w-6xl mx-auto px-6 text-center">
+                    <h3 class="text-3xl font-bold mb-2 text-[var(--color-secondary-blue)]">Our Models</h3>
+                    <p class="text-[var(--color-text-gray)] mb-12">Discover the perfect vehicle for your lifestyle</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
 
-<script src="js/jquery-1.11.0.min.js"></script>
-<script src="slick/slick.min.js"></script>
 
-<script>
-    $(document).ready(function(){
-        console.log("Running");
-    })
-</script>
+
+                        <div
+                            class="bg-white rounded-lg shadow transition overflow-hidden group hover:shadow-2xl hover:-translate-y-4">
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a"
+                                    class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <span
+                                    class="absolute bg-[var(--color-primary-orange)] rounded-full p-2 uppercase absolute top-4 right-4 text-xs text-white">New</span>
+                            </div>
+                            <div class="p-6 text-left">
+                                <h4 class="text-lg font-bold mb-2 text-[var(--color-secondary-blue)]">Velocity E-Drive
+                                </h4>
+                                <p class="text-[var(--color-text-gray)] text-sm mb-4">Our flagship electric vehicle with
+                                    instant torque.
+                                </p>
+                                <div
+                                    class="flex gap-2 mb-4 border-t border-gray-200 border-b py-4 font-medium text-black">
+                                    <span class="text-xs [&>i]:text-[var(--color-primary-orange)] rounded"><i
+                                            class="fa-solid fa-gauge"></i> 0-60 in 3.2s</span>
+                                    <span class="text-xs [&>i]:text-[var(--color-primary-orange)] rounded"><i
+                                            class="fa-solid fa-bolt"></i> 65 HP</span>
+                                </div>
+                                <a href="#"
+                                    class="group inline-flex items-center gap-2 text-[var(--color-primary-orange)] text-sm font-semibold"><span
+                                        class="font-(family-name:--font-heading)">View Details</span> <i
+                                        class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i></a>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-white rounded-lg shadow transition overflow-hidden group hover:shadow-2xl hover:-translate-y-4">
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a"
+                                    class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300">
+
+                            </div>
+                            <div class="p-6 text-left">
+                                <h4 class="text-lg font-bold mb-2 text-[var(--color-secondary-blue)]">Velocity E-Drive
+                                </h4>
+                                <p class="text-[var(--color-text-gray)] text-sm mb-4">Our flagship electric vehicle with
+                                    instant torque.
+                                </p>
+                                <div
+                                    class="flex gap-2 mb-4 border-t border-gray-200 border-b py-4 font-medium text-black">
+                                    <span class="text-xs [&>i]:text-[var(--color-primary-orange)] rounded"><i
+                                            class="fa-solid fa-gauge"></i> 0-60 in 3.2s</span>
+                                    <span class="text-xs [&>i]:text-[var(--color-primary-orange)] rounded"><i
+                                            class="fa-solid fa-bolt"></i> 65 HP</span>
+                                </div>
+                                <a href="#"
+                                    class="group inline-flex items-center gap-2 text-[var(--color-primary-orange)] text-sm font-semibold"><span
+                                        class="font-(family-name:--font-heading)">View Details</span> <i
+                                        class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i></a>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-white rounded-lg shadow transition overflow-hidden group hover:shadow-2xl hover:-translate-y-4">
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a"
+                                    class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <span
+                                    class="absolute bg-[var(--color-success-green)] rounded-full p-2 uppercase absolute top-4 right-4 text-xs text-white">Electric</span>
+                            </div>
+                            <div class="p-6 text-left">
+                                <h4 class="text-lg font-bold mb-2 text-[var(--color-secondary-blue)]">Velocity E-Drive
+                                </h4>
+                                <p class="text-[var(--color-text-gray)] text-sm mb-4">Our flagship electric vehicle with
+                                    instant torque.
+                                </p>
+                                <div
+                                    class="flex gap-2 mb-4 border-t border-gray-200 border-b py-4 font-medium text-black">
+                                    <span class="text-xs [&>i]:text-[var(--color-primary-orange)] rounded"><i
+                                            class="fa-solid fa-gauge"></i> 0-60 in 3.2s</span>
+                                    <span class="text-xs [&>i]:text-[var(--color-primary-orange)] rounded"><i
+                                            class="fa-solid fa-bolt"></i> 65 HP</span>
+                                </div>
+                                <a href="#"
+                                    class="group inline-flex items-center gap-2 text-[var(--color-primary-orange)] text-sm font-semibold"><span
+                                        class="font-(family-name:--font-heading)">View Details</span> <i
+                                        class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i></a>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-white rounded-lg shadow transition overflow-hidden group hover:shadow-2xl hover:-translate-y-4">
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a"
+                                    class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300">
+
+                            </div>
+                            <div class="p-6 text-left">
+                                <h4 class="text-lg font-bold mb-2 text-[var(--color-secondary-blue)]">Velocity E-Drive
+                                </h4>
+                                <p class="text-[var(--color-text-gray)] text-sm mb-4">Our flagship electric vehicle with
+                                    instant torque.
+                                </p>
+                                <div
+                                    class="flex gap-2 mb-4 border-t border-gray-200 border-b py-4 font-medium text-black">
+                                    <span class="text-xs [&>i]:text-[var(--color-primary-orange)] rounded"><i
+                                            class="fa-solid fa-gauge"></i> 0-60 in 3.2s</span>
+                                    <span class="text-xs [&>i]:text-[var(--color-primary-orange)] rounded"><i
+                                            class="fa-solid fa-bolt"></i> 65 HP</span>
+                                </div>
+                                <a href="#"
+                                    class="group inline-flex items-center gap-2 text-[var(--color-primary-orange)] text-sm font-semibold"><span
+                                        class="font-(family-name:--font-heading)">View Details</span> <i
+                                        class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i></a>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-white rounded-lg shadow transition overflow-hidden group hover:shadow-2xl hover:-translate-y-4">
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a"
+                                    class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            </div>
+                            <div class="p-6 text-left">
+                                <h4 class="text-lg font-bold mb-2 text-[var(--color-secondary-blue)]">Velocity E-Drive
+                                </h4>
+                                <p class="text-[var(--color-text-gray)] text-sm mb-4">Our flagship electric vehicle with
+                                    instant torque.
+                                </p>
+                                <div
+                                    class="flex gap-2 mb-4 border-t border-gray-200 border-b py-4 font-medium text-black">
+                                    <span class="text-xs [&>i]:text-[var(--color-primary-orange)] rounded"><i
+                                            class="fa-solid fa-gauge"></i> 0-60 in 3.2s</span>
+                                    <span class="text-xs [&>i]:text-[var(--color-primary-orange)] rounded"><i
+                                            class="fa-solid fa-bolt"></i> 65 HP</span>
+                                </div>
+                                <a href="#"
+                                    class="group inline-flex items-center gap-2 text-[var(--color-primary-orange)] text-sm font-semibold"><span
+                                        class="font-(family-name:--font-heading)">View Details</span> <i
+                                        class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i></a>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="relative bg-cover bg-center h-[400px]"
+                style="background-image: url('https://images.unsplash.com/photo-1503736334956-4c8f8e92946d');">
+
+                <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
+                    <source src="videos/1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="absolute inset-0 bg-black/60"></div>
+                <div class="relative max-w-4xl mx-auto text-center text-white pt-24 px-6">
+                    <h3 class="text-3xl font-bold mb-4">Engineered for Excellence</h3>
+                    <p class="text-gray-300 mb-6">Every Velocity vehicle is crafted with precision and cutting-edge
+                        technology.</p>
+                    <a href="#"
+                        class="bg-white font-medium text-[var(--color-accent-blue)] px-6 py-3 rounded hover:bg-gray-200">Discover
+                        Our Technology</a>
+                </div>
+            </section>
+
+
+            <section class="py-16">
+                <div class="max-w-6xl mx-auto px-6 text-center">
+                    <h3 class="text-3xl font-bold mb-2 text-[var(--color-secondary-blue)]">Gallery</h3>
+                    <p class="text-[var(--color-text-gray)] mb-12">Explore our collection</p>
+
+                    <div class="grid not:(.slick-slider):md:grid-cols-3 gallery gap-6">
+                        <div class="px-3">
+                            <figure class="relative group h-64 rounded-lg overflow-hidden">
+                                <div
+                                    class="absolute w-full h-full bg-gradient-to-t from-black/80 to-transparent pointer-events-none z-1">
+                                </div>
+                                <img src="images/gallery-1.jpg"
+                                    class="rounded-lg shadow-md w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <figcaption
+                                    class="z-2 absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 text-sm group-hover:translate-y-0 translate-y-full transition-transform duration-300">
+                                    Unleash raw power on every drive</figcaption>
+                            </figure>
+                        </div>
+                        <div class="px-3">
+                            <figure class="relative group h-64 rounded-lg overflow-hidden">
+                                <div
+                                    class="absolute w-full h-full bg-gradient-to-t from-black/80 to-transparent pointer-events-none z-1">
+                                </div>
+                                <img src="images/gallery-2.jpg"
+                                    class="rounded-lg shadow-md w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <figcaption
+                                    class="z-2 absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 text-sm group-hover:translate-y-0 translate-y-full transition-transform duration-300">
+                                    Unleash raw power on every drive</figcaption>
+                            </figure>
+                        </div>
+                        <div class="px-3">
+                            <figure class="relative group h-64 rounded-lg overflow-hidden">
+                                <div
+                                    class="absolute w-full h-full bg-gradient-to-t from-black/80 to-transparent pointer-events-none z-1">
+                                </div>
+                                <img src="images/gallery-3.jpg"
+                                    class="rounded-lg shadow-md w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <figcaption
+                                    class="z-2 absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 text-sm group-hover:translate-y-0 translate-y-full transition-transform duration-300">
+                                    Unleash raw power on every drive</figcaption>
+                            </figure>
+                        </div>
+                        <div class="px-3">
+                            <figure class="relative group h-64 rounded-lg overflow-hidden">
+                                <div
+                                    class="absolute w-full h-full bg-gradient-to-t from-black/80 to-transparent pointer-events-none z-1">
+                                </div>
+                                <img src="images/gallery-4.jpg"
+                                    class="rounded-lg shadow-md w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <figcaption
+                                    class="z-2 absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 text-sm group-hover:translate-y-0 translate-y-full transition-transform duration-300">
+                                    Unleash raw power on every drive</figcaption>
+                            </figure>
+                        </div>
+                        <div class="px-3">
+                            <figure class="relative group h-64 rounded-lg overflow-hidden">
+                                <div
+                                    class="absolute w-full h-full bg-gradient-to-t from-black/80 to-transparent pointer-events-none z-1">
+                                </div>
+                                <img src="images/gallery-5.jpg"
+                                    class="rounded-lg shadow-md w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <figcaption
+                                    class="z-2 absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 text-sm group-hover:translate-y-0 translate-y-full transition-transform duration-300">
+                                    Unleash raw power on every drive</figcaption>
+                            </figure>
+
+                        </div>
+
+                        <div class="px-3">
+                            <figure class="relative group h-64 rounded-lg overflow-hidden">
+                                <div
+                                    class="absolute w-full h-full bg-gradient-to-t from-black/80 to-transparent pointer-events-none z-1">
+                                </div>
+                                <img src="images/gallery-6.jpg"
+                                    class="rounded-lg shadow-md w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <figcaption
+                                    class="z-2 absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 text-sm group-hover:translate-y-0 translate-y-full transition-transform duration-300">
+                                    Unleash raw power on every drive</figcaption>
+                            </figure>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="py-16 bg-white">
+                <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+
+
+                    <div class="col-span-1/2">
+                        <h3 class="text-3xl font-bold mb-4">Schedule Your Test Drive</h3>
+                        <p class="text-gray-500 mb-6">Experience the thrill of a driving a Velocity vehicle.Fill out the
+                            form and our team will contact you shortly.</p>
+                        <div class="space-y-5">
+                            <div class="flex gap-8 shadow p-4 rounded-lg">
+                                <div class="icon [&>i]:text-[var(--color-primary-orange)] text-2xl">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="text-left">
+                                    <h3 class="text-[var(--color-accent-blue)] mb-2 font-semibold">Visit Our Showroom
+                                    </h3>
+                                    <address
+                                        class="text-[var(--color-primary-gray)] text-xs flex flex-col gap-1 not-italic">
+                                        <span>123 Motor Avneue,</span>
+                                        <span>Detriot, MI 48201,</span>
+                                        <span>United States</span>
+                                    </address>
+                                </div>
+                            </div>
+                            <div class="flex gap-8 shadow p-4 rounded-lg">
+                                <div class="icon [&>i]:text-[var(--color-primary-orange)] text-2xl">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="text-left">
+                                    <h3 class="text-[var(--color-accent-blue)] mb-2 font-semibold">Call Us</h3>
+                                    <address
+                                        class="text-[var(--color-primary-gray)] text-xs flex flex-col gap-1 not-italic">
+                                        <span>Sales: <a href="tel:+1(555)123-4567"
+                                                class="hover:text-[var(--color-primary-orange)]">+1(555)123-4567</a></span>
+                                        <span>Service: <a href="tel:+1(555)987-6543"
+                                                class="hover:text-[var(--color-primary-orange)]">+1(555)987-6543</a></span>
+                                        <span>Mon-Sat: 9AM - 8PM</span>
+                                    </address>
+                                </div>
+                            </div>
+                            <div class="flex gap-8 shadow p-4 rounded-lg">
+                                <div class="icon [&>i]:text-[var(--color-primary-orange)] text-2xl">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="text-left">
+                                    <h3 class="text-[var(--color-accent-blue)] mb-2 font-semibold">Email Us</h3>
+                                    <address
+                                        class="text-[var(--color-primary-gray)] text-xs flex flex-col gap-1 not-italic">
+                                        <span><a href="mailto:info@velocity.com"
+                                                class="hover:text-[var(--color-primary-orange)]">info@velocity.com</a></span>
+                                        <span><a href="mailto:sales@velocity.com"
+                                                class="hover:text-[var(--color-primary-orange)]">sales@velocity.com</a></span>
+                                        <span>We reply within 24 hours</span>
+                                    </address>
+                                </div>
+                            </div>
+                            <div class="flex gap-8 shadow p-4 rounded-lg">
+                                <div class="icon [&>i]:text-[var(--color-primary-orange)] text-2xl">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div class="text-left">
+                                    <h3 class="text-[var(--color-accent-blue)] mb-2 font-semibold">Business Hours</h3>
+                                    <address
+                                        class="text-[var(--color-primary-gray)] text-xs flex flex-col gap-1 not-italic">
+                                        <span>Monday - Friday: 9:00 AM - 8:00 PM</span>
+                                        <span>Saturday: 10:00 AM - 6:00 PM</span>
+                                        <span>Sunday: Closed</span>
+                                    </address>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-1/2">
+                        <form class="p-8 rounded-lg shadow space-y-4" id="forTestDrive">
+                            <p class="hidden text-[var(--color-error-red)]">Please fill in all required fields.</p>
+                            <div class="group">
+                                <label class="block text-sm font-semibold text-[var(--color-accent-blue)] mb-1" for="name">Full
+                                    Name
+                                    <span class="">*</span></label>
+                                <input type="text" id="name" name="name" placeholder="Full Name"
+                                    class="w-full p-3 border rounded border-gray-300 form-field">
+                            </div>
+                            <div class="group">
+                                <label class="block text-sm font-semibold text-[var(--color-accent-blue)] mb-1" for="email">Email
+                                    Address <span class="">*</span></label>
+
+                                <input type="email" id="email" name="email" placeholder="Email Address"
+                                    class="w-full p-3 border rounded border-gray-300 form-field">
+                            </div>
+                            <div class="group">
+                                <label class="block text-sm font-semibold text-[var(--color-accent-blue)] mb-1" for="phone">Phone
+                                    Number <span class="">*</span></label>
+                                <input type="tel" id="phone" placeholder="Phone Number"
+                                    class="w-full p-3 border rounded border-gray-300 form-field">
+                            </div>
+                            <div class="group">
+                                <label
+                                    class="block text-sm font-semibold text-[var(--color-accent-blue)] mb-1" for="model">Preferred
+                                    Preferred Model <span class="">*</span></label>
+                                <select id="model" name="model"
+                                    class="w-full p-3 border rounded border-gray-300 form-field">
+                                    <option>Select Model</option>
+                                    <option>Velocity Sport</option>
+                                    <option>Velocity SUV</option>
+                                    <option>Velocity E-Drive</option>
+                                </select>
+                            </div>
+                            <div class="group">
+                                <label class="block text-sm font-semibold text-[var(--color-accent-blue)] mb-1" for="date">Phone
+                                    Preferred Date <span class="">*</span></label>
+                                <input type="date" id="date" name="date" placeholder="Preferred Date"
+                                    class="w-full p-3 border rounded border-gray-300 form-field">
+                            </div>
+                            <div class="group">
+                                <label
+                                    class="block text-sm font-semibold text-[var(--color-accent-blue)] mb-1">Additional
+                                    Comments <span class="" for="comments"></span></label>
+                                <textarea id="comments" placeholder="Additional Comments" rows="4"
+                                    class="w-full p-3 border rounded border-gray-300 form-field"></textarea>
+                            </div>
+
+                            <div class="group">
+                                <input type="checkbox" id="terms" class="mr-2 form-field">
+                                <label for="terms" class="text-sm" for="terms">I agree to the terms and conditions</label>
+                            </div>
+
+                            <button
+                                class="w-full font-(family-name:--font-heading) bg-[var(--color-primary-orange)] text-white py-3 font-semibold  rounded hover:bg-orange-600 cursor-pointer">
+                                Submit Request
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+
+
+
+        <footer class="bg-[var(--color-dark-background)] text-white pt-10">
+            <div class="max-w-6xl mx-auto px-4 text-sm">
+                <div class="grid grid-cols-2 lg:grid-cols-5 gap-8">
+                    <div>
+                        <h4 class="text-white font-bold mb-3">VELOCITY</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+                        <nav class="flex space-x-2 mt-4">
+                            <a href="#"
+                                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-600 transition">
+                                <i class="fab fa-facebook-f text-white"></i>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-600 transition">
+                                <i class="fab fa-twitter text-white"></i>
+                                <span class="sr-only">Twitter</span>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-600 transition">
+                                <i class="fab fa-instagram text-white"></i>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-600 transition">
+                                <i class="fab fa-youtube text-white"></i>
+                                <span class="sr-only">YouTube</span>
+                            </a>
+                        </nav>
+
+                    </div>
+                    <div>
+                        <h4 class="text-white mb-3">Models</h4>
+                        <ul class="space-y-2 [&_a:hover]:text-[var(--color-primary-orange)]">
+                            <li><a href="#" class="hover:text-white">Sport</a></li>
+                            <li><a href="#" class="hover:text-white">SUV</a></li>
+                            <li><a href="#" class="hover:text-white">E-Drive</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold mb-3">Company</h4>
+                        <ul class="space-y-2 [&_a:hover]:text-[var(--color-primary-orange)]">
+                            <li><a href="#" class="hover:text-white">About</a></li>
+                            <li><a href="#" class="hover:text-white">Careers</a></li>
+                            <li><a href="#" class="hover:text-white">Press</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold mb-3">Support</h4>
+                        <ul class="space-y-2 [&_a:hover]:text-[var(--color-primary-orange)]">
+                            <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                            <li><a href="#" class="hover:text-white">Find a Dealer</a></li>
+                            <li><a href="#" class="hover:text-white">Owner's Manual</a></li>
+                            <li><a href="#" class="hover:text-white">Warranty</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold mb-3">Newsletter</h4>
+                        <form class="">
+                            <input type="email" name="email" placeholder="Your email"
+                                class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white mb-3">
+                            <button
+                                class="w-full font-(family-name:--font-heading) bg-[var(--color-primary-orange)] py-2 rounded hover:bg-orange-600">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center mt-8 border-t border-gray-700 py-4">
+                    <div class="text-center text-xs">
+                        © <span id="year"></span> Velocity Motors. All rights reserved.
+                    </div>
+                    <nav class="ml-auto text-xs">
+                        <a href="#" class="hover:text-[var(--color-primary-orange)]">Privacy Policy</a>
+                        <span class="mx-2">|</span>
+                        <a href="#" class="hover:text-[var(--color-primary-orange)]">Terms of Service</a>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+
+
+
+    </div>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            console.log("Running");
+
+            $('#year').text(new Date().getFullYear());
+
+            $('.hero-slider').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: false,
+                arrows: false,
+                fade: true,
+            });
+
+            $('.gallery').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: true,
+                arrows: false,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+
+            $('#forTestDrive').on('submit', function (e) {
+                e.preventDefault();
+
+                $('.error-message').remove();
+                $('.form-field').removeClass('border-red-600');
+
+                let valid = true;
+
+                let name = $('#name').val().trim();
+                let email = $('#email').val().trim();
+                let phone = $('#phone').val().trim();
+                let model = $('#model').val();
+                let date = $('#date').val();
+                let terms = $('#terms').is(':checked');
+
+                // Name
+                if (name.length < 2) {
+                    $('#name')
+                        .addClass('border-red-600')
+                        .after('<p class="error-message text-red-600 text-sm mt-1">Name must be at least 2 characters.</p>');
+                    valid = false;
+                }
+
+                // Email
+                if (!email.includes('@') || !email.includes('.')) {
+                    $('#email')
+                        .addClass('border-red-600')
+                        .after('<p class="error-message text-red-600 text-sm mt-1">Enter a valid email.</p>');
+                    valid = false;
+                }
+
+                // Phone (min 10 digits)
+                if (!/^\d{10,}$/.test(phone)) {
+                    $('#phone')
+                        .addClass('border-red-600')
+                        .after('<p class="error-message text-red-600 text-sm mt-1">Enter at least 10 digits.</p>');
+                    valid = false;
+                }
+
+                // Model
+                if (model === "" || model === "Select Model") {
+                    $('#model')
+                        .addClass('border-red-600')
+                        .after('<p class="error-message text-red-600 text-sm mt-1">Select a model.</p>');
+                    valid = false;
+                }
+
+                // Date
+                if (!date) {
+                    $('#date')
+                        .addClass('border-red-600')
+                        .after('<p class="error-message text-red-600 text-sm mt-1">Select a date.</p>');
+                    valid = false;
+                }
+                
+                if (!terms) {
+                    $('#terms')
+                        .parent()
+                        .after('<p class="error-message text-red-600 text-sm mt-1">You must accept terms.</p>');
+                    valid = false;
+                }
+
+                if (valid) {
+                    alert('Form submitted successfully!');
+                    this.reset();
+                }
+            });
+
+            let lastScroll = 0;
+            const header = document.getElementById('header');
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.scrollY;
+
+                if (currentScroll > lastScroll && currentScroll > 50) {
+                    header.style.transform = 'translateY(-120%)';
+                } else {
+                    header.style.transform = 'translateY(0)';
+                }
+
+                lastScroll = currentScroll;
+            });
+        })
+    </script>
 
 </body>
 

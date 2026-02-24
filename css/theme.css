@@ -1,0 +1,40 @@
+
+
+:root {
+  --font-heading: 'Roboto', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+  /* Primary Colors */
+  --color-primary-orange: #FF6B35;
+  --color-secondary-blue: #004E89;
+  --color-accent-blue: #1A659E;
+  --color-dark-background: #0A1128;
+
+  /* Neutral Colors */
+  --color-text-dark: #1a1a1a;
+  --color-text-light: #ffffff;
+  --color-text-gray: #6c757d;
+  --color-background-light: #F7F9FB;
+
+  /* Semantic Colors */
+  --color-error-red: #dc3545;
+  --color-success-green: #2a9d8f;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+
+
+
+.hero-slider,
+.hero-slider .slick-list,
+.hero-slider .slick-track,
+.hero-slider .slick-slide,
+.hero-slider .slick-slide > div {
+  height: 100vh !important;
+}
